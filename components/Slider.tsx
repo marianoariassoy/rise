@@ -83,8 +83,8 @@ const Slider = ({ data }: { data: Project[] }) => {
         ref={slideRef}
         onChange={(oldIndex, newIndex) => setCurrent(newIndex)}
         autoplay={true}
-        duration={4000}
-        transitionDuration={500}
+        duration={5000}
+        transitionDuration={600}
         infinite={true}
         pauseOnHover={false}
         arrows={false}
@@ -94,7 +94,7 @@ const Slider = ({ data }: { data: Project[] }) => {
             key={index}
             className="h-screen w-screen bg-center bg-cover animate-fade-in-slow bg-black"
             style={{
-              backgroundImage: `url(${item.image})`,
+              backgroundImage: `url(${item.image_home})`,
             }}
           ></div>
         ))}

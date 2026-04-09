@@ -1,18 +1,35 @@
 "use client";
+import { useState, useEffect } from "react";
 import Container from "./Container";
 import Link from "next/link";
 import Social from "./Social";
 import { usePathname } from "next/navigation";
+import Axios from "axios";
+import { Project } from "@/types/types";
 
 const Footer = () => {
   const pathname = usePathname();
   const isHome = pathname === "/";
+  const [loading, setLoading] = useState(true);
+  const [projects, setProjects] = useState<Project[]>([]);
 
   const handleScroll = (id: string) => {
     document.getElementById(id)?.scrollIntoView({
       behavior: "smooth",
     });
   };
+
+  useEffect(() => {
+    const fetchData = async () => {
+      const response = await Axios.get(
+        process.env.NEXT_PUBLIC_API_URL + "/projects",
+      );
+      const res = response.data;
+      setProjects(res);
+      setLoading(false);
+    };
+    fetchData();
+  }, []);
 
   return (
     <footer className="bg-primary text-white py-10">
@@ -83,21 +100,16 @@ const Footer = () => {
                   </Link>
                 )}
               </li>
-              <li>
-                <Link href="#" className="hover:text-secondary">
-                  Italo II
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-secondary">
-                  Dean Funes
-                </Link>
-              </li>
-              <li>
-                <Link href="#" className="hover:text-secondary">
-                  Vicente Lopez
-                </Link>
-              </li>
+              {projects.map((item, index) => (
+                <li key={index} onClick={() => handleScroll(item.slug)}>
+                  <Link
+                    href={`/proyectos/${item.slug}`}
+                    className="hover:text-secondary"
+                  >
+                    {item.title}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
           <div className="flex flex-col gap-y-3 justify-start items-start">
@@ -131,7 +143,7 @@ const Footer = () => {
                 Contacto
               </Link>
             )}
-            <div className="text-primary mt-1">
+            <div className="text-primary mt-2 mb-2">
               <Social />
             </div>
           </div>

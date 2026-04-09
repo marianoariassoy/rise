@@ -7,7 +7,14 @@ interface Props extends News {
   index: number;
 }
 
-const NovedadesItem = ({ title, text, image, date, index }: Props) => {
+const NovedadesItem = ({
+  title,
+  slug,
+  short_text,
+  image,
+  date,
+  index,
+}: Props) => {
   const [ref, inView] = useInView({
     triggerOnce: false,
     threshold: 0.2,
@@ -29,12 +36,12 @@ const NovedadesItem = ({ title, text, image, date, index }: Props) => {
       </div>
       <div className="flex flex-col gap-y-2 px-6">
         <h2 className="font-extrabold text-xl lg:text-3xl">{title}</h2>
-        <p className="text-sm">{text}</p>
+        <p className="text-sm">{short_text}</p>
         <p className="text-sm text-secondary">{date}</p>
       </div>
       <div className="h-44 relative overflow-hidden">
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
-          <Button title="Ver más" href="#" />
+          <Button title="Ver más" href={`/novedades/${slug}`} />
         </div>
         <div
           className="absolute top-0 left-0 w-full h-1/2 bg-white z-10

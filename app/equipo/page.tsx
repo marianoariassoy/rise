@@ -6,33 +6,11 @@ export const metadata = {
   title: "Equipo",
 };
 
-const page = () => {
-  const data = [
-    {
-      id: 1,
-      title: "Ing. Nestor Riise",
-      image:
-        "https://images.pexels.com/photos/28822840/pexels-photo-28822840.jpeg",
-    },
-    {
-      id: 2,
-      title: "Arq.Lucio Marmol",
-      image:
-        "https://images.pexels.com/photos/28822840/pexels-photo-28822840.jpeg",
-    },
-    {
-      id: 3,
-      title: "Arq.Gabriel Layún",
-      image:
-        "https://images.pexels.com/photos/28822840/pexels-photo-28822840.jpeg",
-    },
-    {
-      id: 4,
-      title: "Ing. Patricio Cornejo",
-      image:
-        "https://images.pexels.com/photos/28822840/pexels-photo-28822840.jpeg",
-    },
-  ];
+const page = async () => {
+  const response = await fetch(process.env.NEXT_PUBLIC_API_URL + "/team", {
+    cache: "no-store",
+  });
+  const data = await response.json();
 
   return (
     <section>

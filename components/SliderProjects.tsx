@@ -40,14 +40,22 @@ const Slider = ({ data }: { data: Project[] }) => {
             <h1 className="text-5xl lg:text-7xl font-black mb-4 transition-all">
               {data[current].title}
             </h1>
-            <Button title="Conocé más" href="#" />
+            <Button
+              title="Conocé más"
+              href={`/proyectos/${data[current].slug}`}
+            />
           </div>
           <div className="flex items-center gap-x-4">
-            <Pildoras percentage={data[current].percentage} />
+            <Pildoras percentage={data[current].percent} />
             <hr className="border-white w-full" />
-            <span className="shrink-0 bg-white h-10 w-10 rounded-full flex items-center justify-center text-secondary">
-              <Forward />
-            </span>
+            <button
+              className="cursor-pointer"
+              onClick={() => goToSlide(current + 1)}
+            >
+              <span className="shrink-0 bg-white h-10 w-10 rounded-full flex items-center justify-center text-secondary hover:bg-secondary transition-all hover:text-white">
+                <Forward />
+              </span>
+            </button>
           </div>
           <div className="flex justify-between items-center gap-4">
             <div className="font-bold text-lg lg:text-2xl">
@@ -89,7 +97,7 @@ const Slider = ({ data }: { data: Project[] }) => {
             key={index}
             className="h-screen w-screen bg-center bg-cover"
             style={{
-              backgroundImage: `url(${item.image})`,
+              backgroundImage: `url(${item.image_hero})`,
             }}
           ></div>
         ))}

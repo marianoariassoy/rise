@@ -1,7 +1,9 @@
 export interface News {
   id?: number;
+  slug: string;
   title: string;
-  text: string;
+  text?: string;
+  short_text: string;
   image: string;
   date: string;
 }
@@ -17,11 +19,21 @@ export interface Contact {
 export interface Project {
   id: number;
   title: string;
+  slug: string;
   image: string;
+  image_home: string;
+  image_hero: string;
   date?: string;
-  percentage?: number;
+  percent?: number;
   description?: string;
   address?: string;
+  pool?: string;
+  solarium?: string;
+  garage?: string;
+  security?: string;
+  kitchen?: string;
+  heating?: string;
+  file?: string;
 }
 
 export interface Team {
