@@ -64,7 +64,6 @@ const Slider = ({ data }: { data: Project[] }) => {
                 </li>
               ))}
             </ul>
-
             <button
               className="flex items-center gap-x-4 pr-2 pl-6 py-2 rounded-full border border-secondary hover:gap-x-6 transition-all cursor-pointer"
               onClick={() => handleScroll("projects")}
@@ -77,7 +76,6 @@ const Slider = ({ data }: { data: Project[] }) => {
           </div>
         </Container>
       </div>
-
       <div className="absolute top-0 left-0 bg-black/30 w-full h-full z-10"></div>
       <Fade
         ref={slideRef}

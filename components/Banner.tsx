@@ -4,7 +4,7 @@ const Banner = () => {
       className="aspect-7/5 lg:aspect-16/5 bg-cover bg-center bg-fixed"
       style={{
         backgroundImage:
-          "url(https://images.pexels.com/photos/28822840/pexels-photo-28822840.jpeg)",
+          "url(https://backend.ligadecapitanes.com.ar/rise/images-static/home.jpg)",
       }}
     />
   );

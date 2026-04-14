@@ -81,7 +81,7 @@ const Slider = ({ data }: { data: Project[] }) => {
           </div>
         </Container>
       </div>
-
+      <div className="absolute top-0 left-0 bg-black/30 w-full h-full z-10"></div>
       <Slide
         ref={slideRef}
         onChange={(oldIndex, newIndex) => setCurrent(newIndex)}
