@@ -82,7 +82,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
           )}
         </div>
 
-        <div className="py-8 lg:py-20 flex flex-col gap-y-4 relative max-w-md px-4 lg:px-0 opacity-0 animate-fade-left">
+        <div className="py-8 lg:py-20 flex flex-col gap-y-4 relative max-w-xl px-4 lg:px-0 opacity-0 animate-fade-left">
           <header className="flex flex-col lg:flex-row lg:justify-between lg:items-end gap-y-2">
             <div>
               <h2 className="text-lg text-secondary">Proyectos</h2>

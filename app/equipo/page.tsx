@@ -27,17 +27,14 @@ const page = async () => {
           }}
         ></div>
 
-        <div className="py-8 lg:py-20 flex flex-col gap-y-8 relative max-w-md px-4 lg:px-0 opacity-0 animate-fade-left">
+        <div className="py-8 lg:py-20 flex flex-col gap-y-8 relative max-w-xl px-4 lg:px-0 opacity-0 animate-fade-left">
           <div className="absolute -translate-y-10 lg:-translate-y-6 lg:-translate-x-8 text-4xl font-light text-secondary">
             +
           </div>
-          <h1 className="text-3xl lg:text-5xl flex flex-col">
-            <span className="font-bold">Creemos en las alianzas</span>
-            <span>
-              que <span className="font-black">construyen futuro.</span>
-            </span>
+          <h1 className="text-3xl lg:text-5xl flex flex-col font-bold">
+            Creemos en las alianzas que construyen futuro.
           </h1>
-          <p className="text-xl leading-tight [&>strong]:font-black">
+          <p className="text-xl leading-tight [&>strong]:font-extrabold">
             <strong>Más de tres décadas</strong> construyendo juntos proyectos
             que trascienden los planos. <br />
             <strong>Hoyseguimos creciendo</strong>, impulsados por la misma

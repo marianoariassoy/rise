@@ -2,12 +2,16 @@ import { Facebook, Instagram, Linkedin } from "./icons";
 
 export const nav = [
   {
+    title: "Home",
+    tag: "hero",
+  },
+  {
     title: "Acerca de",
     tag: "about",
   },
   {
-    title: "Servicios",
-    tag: "services",
+    title: "Equipo",
+    tag: "equipo",
   },
   {
     title: "Proyectos",

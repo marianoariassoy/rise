@@ -55,18 +55,26 @@ const Header = () => {
             <img
               src="/assets/logo.svg"
               alt="Logo Riise & Asoc"
-              className={`transition-all ${scrolled || !isHome ? "h-16" : "h-20"}`}
+              className={`transition-all ${scrolled || !isHome ? "h-12" : "h-17"}`}
             />
           </Link>
         </div>
         <div className="hidden lg:block">
-          <Nav handleScroll={handleScroll} isHome={isHome} />
+          <Nav
+            handleScroll={handleScroll}
+            isHome={isHome}
+            pathname={pathname}
+          />
         </div>
         <div
           className={`fixed w-full h-full opacity-0 top-0 left-0 bg-black/60 backdrop-blur-sm z-20 ${menuOpen ? "block animate-fade-in" : "hidden"}`}
         >
           <div className="absolute left-1/2 -translate-1/2 top-1/2 shadow">
-            <Nav handleScroll={handleScroll} isHome={isHome} />
+            <Nav
+              handleScroll={handleScroll}
+              isHome={isHome}
+              pathname={pathname}
+            />
           </div>
         </div>
         <div className="flex-1 justify-end hidden lg:flex animate-fade-left">

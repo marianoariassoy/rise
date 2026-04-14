@@ -20,7 +20,7 @@ const Acercade = () => {
       <div className="absolute bottom-4 right-2 z-20">
         <img src="/assets/cross.svg" alt="Cross" />
       </div>
-      <Container className="grid grid-cols-1 lg:grid-cols-2 items-center gap-x-40 gap-y-12 py-24 pb-30">
+      <Container className="grid grid-cols-1 lg:grid-cols-2 items-center gap-x-26 gap-y-12 py-24 pb-30">
         <div className="flex flex-col gap-y-12 lg:gap-y-20 relative">
           <div className={`opacity-0 ${inView ? "animate-fade-right" : ""}`}>
             <div className="absolute -translate-y-10 lg:-translate-y-6 lg:-translate-x-6 text-3xl font-light">
@@ -35,22 +35,22 @@ const Acercade = () => {
             className={`uppercase grid grid-cols-3 border border-white opacity-0 ${inView ? "animate-fade-in" : ""}`}
           >
             <div className="px-2 py-6 border-r border-white text-center">
-              <h3 className="font-extrabold text-xl lg:text-3xl">
-                +<CountUp end={inView ? 35 : 0} duration={2} />
+              <h3 className="font-black text-xl lg:text-2xl">
+                +<CountUp end={inView ? 40 : 0} duration={2} />
               </h3>
-              <p className="font-light text-sm lg:text-base">Edificios</p>
+              <p className="font-light text-xs">Edificios Construidos</p>
             </div>
             <div className="px-2 py-6 border-r border-white text-center">
-              <h3 className="font-extrabold text-xl lg:text-3xl">
-                +<CountUp end={inView ? 1500 : 0} duration={3} />
+              <h3 className="font-black text-xl lg:text-2xl">
+                +<CountUp end={inView ? 150 : 0} duration={3} /> MIL
               </h3>
-              <p className="font-light text-sm lg:text-base">Clientes</p>
+              <p className="font-light text-xs">M2 Construidos</p>
             </div>
             <div className="px-2 py-6 text-center">
-              <h3 className="font-extrabold text-xl lg:text-3xl">
-                <CountUp end={inView ? 30 : 0} duration={4} />
+              <h3 className="font-black text-xl lg:text-2xl">
+                +<CountUp end={inView ? 30 : 0} duration={4} />
               </h3>
-              <p className="font-light text-sm lg:text-base">Trayectoria </p>
+              <p className="font-light text-xs">Años de Trayectoria</p>
             </div>
           </div>
         </div>

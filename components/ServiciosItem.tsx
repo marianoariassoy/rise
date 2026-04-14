@@ -18,18 +18,13 @@ const ServiciosItem = ({ data, goToSlide, index }: Props) => {
 
   return (
     <article className="w-full relative" ref={ref}>
-      <hr
-        className={`absolute border-primary w-2/6 top-1/2 -z-1 -translate-y-30 ${index % 2 !== 0 ? "left-8" : "right-8"}`}
-      />
-      <hr
-        className={`absolute border-primary w-1/2 top-1/2 -z-1 -translate-y-30 ${index % 2 !== 0 ? "right-8" : "left-8"}`}
-      />
+      <hr className="absolute border-primary w-1/5 top-1/2 -z-1 -translate-y-30 right-8" />
+      <hr className="absolute border-primary w-1/2 top-1/2 -z-1 -translate-y-30 left-8" />
 
-      <Container className="grid grid-cols-1 lg:grid-cols-2 items-center gap-x-40 gap-y-8 lg:gap-y-12 py-24">
+      <Container className="grid grid-cols-1 lg:grid-cols-2 items-center gap-x-26 gap-y-8 lg:gap-y-12 py-24">
         <div
           className={`aspect-square lg:aspect-5/7 opacity-0 
-          ${index % 2 !== 0 ? "lg:order-2" : "lg:order-1"} 
-          ${inView ? (index % 2 !== 0 ? "animate-fade-left" : "animate-fade-right") : ""}`}
+          ${inView ? "animate-fade-right" : ""}`}
         >
           <img
             src={data.image}
@@ -39,8 +34,7 @@ const ServiciosItem = ({ data, goToSlide, index }: Props) => {
         </div>
         <div
           className={`flex flex-col px-4 items-start gap-y-4 lg:gap-y-8 bg-white opacity-0 
-            ${index % 2 !== 0 ? "lg:order-1" : "lg:order-2"} 
-            ${inView ? (index % 2 !== 0 ? "animate-fade-right" : "animate-fade-left") : ""}`}
+             ${inView ? "animate-fade-left" : ""}`}
         >
           <div>
             <h2 className="text-secondary text-xl lg:text-3xl mb-1">

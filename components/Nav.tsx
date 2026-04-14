@@ -4,14 +4,23 @@ import Link from "next/link";
 interface Props {
   handleScroll: (id: string) => void;
   isHome: boolean;
+  pathname: string;
 }
 
-const Nav = ({ handleScroll, isHome }: Props) => {
+const Nav = ({ handleScroll, isHome, pathname }: Props) => {
   return (
     <nav className="w-full lg:bg-primary text-white flex items-center justify-between px-10 py-10 lg:py-4 rounded-3xl lg:rounded-full lg:shadow-md">
       <div className="flex flex-col lg:flex-row gap-y-4 gap-x-8">
         {nav.map((item, index) =>
-          isHome ? (
+          item.tag === "equipo" ? (
+            <Link
+              key={index}
+              href={"/equipo"}
+              className={`cursor-pointer font-bold hover:text-secondary  rounded ${pathname === "/equipo" ? "text-secondary" : ""}`}
+            >
+              {item.title}
+            </Link>
+          ) : isHome ? (
             <button
               key={item.tag}
               onClick={() => handleScroll(item.tag)}
