@@ -25,19 +25,21 @@ const NovedadesItem = ({
 
   return (
     <article
-      className={`flex flex-col gap-y-4 bg-white rounded-3xl text-primary overflow-hidden opacity-0 ${inView ? "animate-fade-up" : ""}`}
+      className={`flex flex-col justify-between gap-y-4 bg-white rounded-3xl text-primary overflow-hidden opacity-0 ${inView ? "animate-fade-up" : ""}`}
       ref={ref}
       style={{
         animationDelay: `${delay}s`,
       }}
     >
-      <div className="px-6 pt-10 flex justify-end">
-        <img src="/assets/iso.svg" alt="Isologo" className="h-8" />
-      </div>
-      <div className="flex flex-col gap-y-2 px-6">
-        <h2 className="font-extrabold text-xl lg:text-3xl">{title}</h2>
-        <p className="text-sm">{short_text}</p>
-        <p className="text-sm text-secondary">{date}</p>
+      <div>
+        <div className="px-6 pt-10 flex justify-end mb-6">
+          <img src="/assets/iso.svg" alt="Isologo" className="h-8" />
+        </div>
+        <div className="flex flex-col gap-y-2 px-6">
+          <h2 className="font-extrabold text-xl lg:text-3xl">{title}</h2>
+          <p className="text-sm">{short_text}</p>
+          <p className="text-sm text-secondary">{date}</p>
+        </div>
       </div>
       <div className="h-44 relative overflow-hidden">
         <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
