@@ -32,14 +32,17 @@ const Page = () => {
   const onSubmit: SubmitHandler<Contact> = async (data) => {
     setSending(true);
     const sender = {
-      to: "",
-      from: "no-reply@",
+      to: "riiseyasociados@gmail.com",
+      from: "no-reply@riiseyasociados.com.ar",
       from_name: "Rise",
       subject: "Contacto",
     };
 
     try {
-      const response = await axios.post("", { ...data, ...sender });
+      const response = await axios.post(
+        "https://backend.riiseyasociados.com.ar/send-email.php",
+        { ...data, ...sender },
+      );
       if (response?.data?.error) {
         setError(response.data.message);
         setSending(false);
@@ -64,7 +67,7 @@ const Page = () => {
     return (
       <div>
         <h1 className="text-secondary text-xl">Contacto</h1>
-        <h2 className="font-bold text-4xl lg:text-6xl">
+        <h2 className="font-bold text-3xl lg:text-5xl">
           ¡Su mensaje fue enviado con éxito!
         </h2>
       </div>
