@@ -21,7 +21,7 @@ const page = async () => {
           className="overflow-hidden h-full aspect-square lg:aspect-auto opacity-0 animate-fade-right"
           style={{
             backgroundImage:
-              "url(https://backend.ligadecapitanes.com.ar/rise/images-static/equipo.jpg)",
+              "url(https://backend.ligadecapitanes.com.ar/rise/images-static/equipo.jpg?v=15)",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
