@@ -37,12 +37,12 @@ const Slider = ({ data }: { data: Project[] }) => {
         <Container className="flex flex-col lg:flex-row justify-between lg:items-end gap-4">
           <div>
             <h1 className="flex flex-col text-3xl lg:text-7xl">
-              <span className="font-black">Seguimos</span>
-              <span className="font-bold">Construyendo</span>
+              <span className="font-bold">Seguimos</span>
+              <span>Construyendo</span>
             </h1>
             <p className="text-lg lg:text-2xl flex flex-col leading-tight">
               <span className="font-light">Un nuevo enfoque que combina</span>
-              <span className="font-extrabold">
+              <span className="font-bold">
                 trayectoria, calidad y funcionalidad.
               </span>
             </p>
@@ -55,7 +55,7 @@ const Slider = ({ data }: { data: Project[] }) => {
                   onClick={() => goToSlide(index)}
                   className="flex items-center gap-3 cursor-pointer group"
                 >
-                  <span className="text-lg font-extrabold">{item.title}</span>
+                  <span className="text-lg font-semibold">{item.title}</span>
                   <span
                     className={`w-3 h-3 border border-white rounded-full transition hover:bg-white ${
                       current === index ? "bg-white" : ""

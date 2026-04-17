@@ -37,7 +37,7 @@ const Slider = ({ data }: { data: Project[] }) => {
         <Container className="text-white flex flex-col gap-y-8">
           <div className="flex flex-col items-start">
             <h2 className="text-xl text-secondary">Proyectos</h2>
-            <h1 className="text-5xl lg:text-7xl font-black mb-4 transition-all">
+            <h1 className="text-5xl lg:text-7xl font-bold mb-4 transition-all">
               {data[current].title}
             </h1>
             <Button
@@ -58,8 +58,11 @@ const Slider = ({ data }: { data: Project[] }) => {
             </button>
           </div>
           <div className="flex justify-between items-center gap-4">
-            <div className="font-bold text-lg lg:text-2xl">
-              {data[current].date}
+            <div className="font-bold lg:text-xl flex items-center gap-x-2">
+              <Forward />
+              <span>
+                {data[current].finished ? "Terminada" : "En construcción"}
+              </span>
             </div>
             <div>
               <ul className="flex items-end gap-3">

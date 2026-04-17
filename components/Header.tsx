@@ -64,16 +64,18 @@ const Header = () => {
             handleScroll={handleScroll}
             isHome={isHome}
             pathname={pathname}
+            setMenuOpen={setMenuOpen}
           />
         </div>
         <div
-          className={`fixed w-full h-full opacity-0 top-0 left-0 bg-black/60 backdrop-blur-sm z-20 ${menuOpen ? "block animate-fade-in" : "hidden"}`}
+          className={`fixed w-full h-full opacity-0 top-0 left-0 bg-black/70 backdrop-blur z-20 ${menuOpen ? "block animate-fade-in" : "hidden"}`}
         >
           <div className="absolute left-1/2 -translate-1/2 top-1/2 shadow">
             <Nav
               handleScroll={handleScroll}
               isHome={isHome}
               pathname={pathname}
+              setMenuOpen={setMenuOpen}
             />
           </div>
         </div>

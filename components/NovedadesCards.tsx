@@ -28,7 +28,7 @@ const NovedadesCards = ({ data }: { data: News[] }) => {
             onClick={() => setShowItems(showItems + 3)}
             className="flex items-center gap-x-4 pr-2 pl-6 py-2 rounded-full border border-secondary hover:gap-x-6 transition-all cursor-pointer"
           >
-            <span className="font-bold text-lg">Más novedades</span>
+            <span className="font-bold lg:text-lg">Más novedades</span>
             <span className="bg-secondary h-8 w-8 rounded-full flex items-center justify-center">
               <span className="rotate-90">
                 <Forward />

@@ -22,7 +22,7 @@ const Contacto = () => {
           <div>
             <h3 className="text-secondary text-xl">Dirección</h3>
             <p className="text-2xl lg:text-4xl font-semibold">
-              Av. Belgrano 1557 of.2 - Salta
+              Av. Belgrano 1557 of.3 - Salta
             </p>
           </div>
           <div>

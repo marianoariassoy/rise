@@ -44,14 +44,14 @@ const Footer = () => {
                 {isHome ? (
                   <button
                     onClick={() => handleScroll("about")}
-                    className="font-extrabold text-lg cursor-pointer hover:text-secondary"
+                    className="font-bold text-lg cursor-pointer hover:text-secondary"
                   >
                     Acerca de
                   </button>
                 ) : (
                   <Link
                     href="/#about"
-                    className="font-extrabold text-lg hover:text-secondary"
+                    className="font-bold text-lg hover:text-secondary"
                   >
                     Acerca de
                   </Link>
@@ -68,14 +68,14 @@ const Footer = () => {
                 {isHome ? (
                   <button
                     onClick={() => handleScroll("services")}
-                    className="font-extrabold text-lg cursor-pointer hover:text-secondary"
+                    className="font-bold text-lg cursor-pointer hover:text-secondary"
                   >
                     Servicios
                   </button>
                 ) : (
                   <Link
                     href="/#services"
-                    className="font-extrabold text-lg hover:text-secondary"
+                    className="font-bold text-lg hover:text-secondary"
                   >
                     Servicios
                   </Link>
@@ -87,43 +87,44 @@ const Footer = () => {
                 {isHome ? (
                   <button
                     onClick={() => handleScroll("projects")}
-                    className="font-extrabold text-lg cursor-pointer hover:text-secondary"
+                    className="font-bold text-lg cursor-pointer hover:text-secondary"
                   >
                     Proyectos
                   </button>
                 ) : (
                   <Link
                     href="/#projects"
-                    className="font-extrabold text-lg hover:text-secondary"
+                    className="font-bold text-lg hover:text-secondary"
                   >
                     Proyectos
                   </Link>
                 )}
               </li>
-              {projects.map((item, index) => (
-                <li key={index} onClick={() => handleScroll(item.slug)}>
-                  <Link
-                    href={`/proyectos/${item.slug}`}
-                    className="hover:text-secondary"
-                  >
-                    {item.title}
-                  </Link>
-                </li>
-              ))}
+              {!loading &&
+                projects.map((item, index) => (
+                  <li key={index} onClick={() => handleScroll(item.slug)}>
+                    <Link
+                      href={`/proyectos/${item.slug}`}
+                      className="hover:text-secondary"
+                    >
+                      {item.title}
+                    </Link>
+                  </li>
+                ))}
             </ul>
           </div>
           <div className="flex flex-col gap-y-3 justify-start items-start">
             {isHome ? (
               <button
                 onClick={() => handleScroll("news")}
-                className="font-extrabold text-lg cursor-pointer hover:text-secondary"
+                className="font-bold text-lg cursor-pointer hover:text-secondary"
               >
                 Novedades
               </button>
             ) : (
               <Link
                 href="/#news"
-                className="font-extrabold text-lg hover:text-secondary"
+                className="font-bold text-lg hover:text-secondary"
               >
                 Novedades
               </Link>
@@ -131,14 +132,14 @@ const Footer = () => {
             {isHome ? (
               <button
                 onClick={() => handleScroll("contact")}
-                className="font-extrabold text-lg cursor-pointer hover:text-secondary"
+                className="font-bold text-lg cursor-pointer hover:text-secondary"
               >
                 Contacto
               </button>
             ) : (
               <Link
                 href="/#contact"
-                className="font-extrabold text-lg hover:text-secondary"
+                className="font-bold text-lg hover:text-secondary"
               >
                 Contacto
               </Link>

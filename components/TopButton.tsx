@@ -10,7 +10,7 @@ const TopButton = ({
   return (
     <button
       onClick={scrollToTop}
-      className={`fixed bottom-8 right-4 z-50 bg-secondary text-white p-3 rounded-full w-12 h-12 flex items-center justify-center shadow-lg transition-all duration-300 cursor-pointer hover:scale-105 ${
+      className={`fixed bottom-24 right-4 z-50 bg-[#666666] text-white p-3 rounded-full w-12 h-12 flex items-center justify-center shadow-lg transition-all duration-300 cursor-pointer hover:scale-105 ${
         showTopButton
           ? "opacity-100 translate-y-0"
           : "opacity-0 translate-y-4 pointer-events-none"

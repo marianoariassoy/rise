@@ -34,6 +34,7 @@ export interface Project {
   kitchen?: string;
   heating?: string;
   file?: string;
+  finished?: boolean;
 }
 
 export interface Team {

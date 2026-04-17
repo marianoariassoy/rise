@@ -66,9 +66,9 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
             <h1 className="text-4xl lg:text-6xl font-extrabold lg:mb-2">
               {data.title}
             </h1>
-            <h3 className="text-xl lg:text-2xl text-secondary shrink-0">
+            {/* <h3 className="text-xl lg:text-2xl text-secondary shrink-0">
               {data.date}
-            </h3>
+            </h3> */}
           </div>
         </div>
         <p className="leading-tight text-lg whitespace-break-spaces">

@@ -61,8 +61,8 @@ const Acercade = () => {
             +
           </div>
           <h1 className="text-2xl lg:text-4xl flex gap-x-2">
-            <span className="font-black">Seguimos</span>
-            <span className="font-bold">Construyendo</span>
+            <span className="font-bold">Seguimos</span>
+            <span>Construyendo</span>
           </h1>
           <p>
             Con más de tres décadas de trayectoria en el Desarrollo

@@ -36,18 +36,21 @@ const NovedadesItem = ({
           <img src="/assets/iso.svg" alt="Isologo" className="h-8" />
         </div>
         <div className="flex flex-col gap-y-2 px-6">
-          <h2 className="font-extrabold text-xl lg:text-3xl">{title}</h2>
+          <h2 className="font-bold text-lg lg:text-2xl leading-tight">
+            {title}
+          </h2>
           <p className="text-sm">{short_text}</p>
-          <p className="text-sm text-secondary">{date}</p>
+          {/* <p className="text-sm text-secondary">{date}</p> */}
         </div>
       </div>
       <div className="h-44 relative overflow-hidden">
-        <div className="absolute bottom-8 left-1/2 -translate-x-1/2">
+        <div className="h-full w-full bg-black/20 absolute z-10 top-0 left-0"></div>
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20">
           <Button title="Ver más" href={`/novedades/${slug}`} />
         </div>
         <div
           className="absolute top-0 left-0 w-full h-1/2 bg-white z-10
-              [clip-path:polygon(0_0,100%_0,100%_100%,50%_5%,0_100%)] -translate-y-1"
+              [clip-path:polygon(0_0,100%_0,100%_100%,50%_5%,0_100%)] -translate-y-1 transition-all"
         ></div>
         <img
           src={image}

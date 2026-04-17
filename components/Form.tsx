@@ -150,7 +150,7 @@ const Page = () => {
             <Loader />
           ) : (
             <button className="flex items-center gap-x-4 pr-2 pl-6 py-2 rounded-full bg-primary text-white hover:gap-x-6 transition-all cursor-pointer">
-              <span className="font-bold text-lg">Enviar</span>
+              <span className="font-bold lg:text-lg">Enviar</span>
               <span className="bg-white text-primary h-8 w-8 rounded-full flex items-center justify-center">
                 <Forward />
               </span>

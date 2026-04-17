@@ -6,6 +6,7 @@ import Proyectos from "@/components/Proyectos";
 import Novedades from "@/components/Novedades";
 import Map from "@/components/Map";
 import Contacto from "@/components/Contacto";
+import Whatsapp from "@/components/WhatsApp";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
       <Novedades />
       <Map />
       <Contacto />
+      <Whatsapp />
     </>
   );
 }

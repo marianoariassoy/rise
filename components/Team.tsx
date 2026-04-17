@@ -30,7 +30,7 @@ const TeamComponent = ({ data }: { data: Team[] }) => {
               className="object-cover w-full h-full"
             />
           </div>
-          <h1 className="lg:text-lg font-bold text-center">{item.title}</h1>
+          <h1 className="font-bold text-center">{item.title}</h1>
         </article>
       ))}
     </section>

@@ -18,7 +18,7 @@ const page = async () => {
 
       <div className="gap-x-20 gap-y-8 grid grid-cols-1 lg:grid-cols-2 bg-primary text-white items-stretch">
         <div
-          className="overflow-hidden h-full aspect-square lg:aspect-auto opacity-0 animate-fade-right"
+          className="overflow-hidden h-full aspect-video lg:aspect-auto opacity-0 animate-fade-right bg-no-repeat bg-cover"
           style={{
             backgroundImage:
               "url(https://backend.riiseyasociados.com.ar/images-static/equipo.jpg?v=15)",
@@ -31,10 +31,10 @@ const page = async () => {
           <div className="absolute -translate-y-10 lg:-translate-y-6 lg:-translate-x-8 text-4xl font-light text-secondary">
             +
           </div>
-          <h1 className="text-3xl lg:text-5xl flex flex-col font-bold">
+          <h1 className="text-2xl lg:text-5xl flex flex-col font-bold">
             Creemos en las alianzas que construyen futuro.
           </h1>
-          <p className="text-xl leading-tight [&>strong]:font-extrabold">
+          <p className="lg:text-lg leading-tight [&>strong]:font-bold">
             <strong>Más de tres décadas</strong> construyendo juntos proyectos
             que trascienden los planos. <br />
             <strong>Hoyseguimos creciendo</strong>, impulsados por la misma
@@ -43,7 +43,7 @@ const page = async () => {
             <br /> <br />
             <strong>Tres socios, una sola visión.</strong>
           </p>
-          <p className="text-xl font-bold">
+          <p className="lg:text-lg font-bold">
             Arq. Gabriel Layún <span className="text-secondary">+</span> Ing.
             Nestor Riise <span className="text-secondary">+</span> Arq,Lucio
             Marmol
