@@ -92,7 +92,8 @@ export default function InteractiveMap() {
 
       {/* mapa */}
       <Image
-        src="/assets/map.svg"
+        // src="/assets/map.svg"
+        src="/assets/plano.png"
         alt="Mapa interactivo"
         width={1920}
         height={1080}

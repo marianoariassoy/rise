@@ -58,7 +58,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
 
       <div className="gap-x-20 gap-y-8 grid grid-cols-1 lg:grid-cols-2 items-stretch">
         <div
-          className="overflow-hidden h-full relative lg:aspect-auto opacity-0 animate-fade-right"
+          className="overflow-hidden h-full relative aspect-square lg:aspect-auto opacity-0 animate-fade-right"
           style={{
             backgroundImage: "url(" + data.image + ")",
             backgroundSize: "cover",
@@ -70,10 +70,12 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
               href={data.file}
               target="_blank"
               rel="noreferrer"
-              className="absolute left-1/2 -translate-x-1/2 bottom-20 flex bg-secondary text-white items-center gap-x-4 pr-2 pl-6 py-2 rounded-full hover:gap-x-6 transition-all cursor-pointer"
+              className="absolute left-4 lg:left-1/2 lg:-translate-x-1/2 bottom-8 lg:bottom-20 flex bg-secondary text-white items-center gap-x-4 pr-2 pl-6 py-2 rounded-full hover:gap-x-6 transition-all cursor-pointer"
             >
-              <span className="font-bold text-lg">Descargá brochure</span>
-              <span className="bg-white text-secondary h-8 w-8 rounded-full flex items-center justify-center">
+              <span className="font-bold text-sm lg:text-lg">
+                Descargá brochure
+              </span>
+              <span className="bg-white text-secondary h-8 w-8 rounded-full flex items-center justify-center shrink-0">
                 <span className="rotate-90">
                   <Forward />
                 </span>
