@@ -94,9 +94,9 @@ export default function InteractiveMap() {
       <Image
         src="/assets/map.svg"
         alt="Mapa interactivo"
-        width={1400}
-        height={900}
-        className="w-full h-auto rounded-xl"
+        width={1920}
+        height={1080}
+        className="w-full h-auto"
       />
 
       {/* puntos */}
