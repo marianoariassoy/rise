@@ -118,7 +118,7 @@ const page = async ({ params }: { params: Promise<{ slug: string }> }) => {
             )}
             <div>
               <a
-                href="https://wa.me/54938740660014"
+                href="https://wa.me/5493874660014"
                 target="_blank"
                 rel="noreferrer"
                 className="flex bg-secondary text-white items-center gap-x-4 pr-2 pl-6 py-2 rounded-full hover:gap-x-6 transition-all"
