@@ -4,7 +4,7 @@ import Banner from "@/components/Banner";
 import Servicios from "@/components/Servicios";
 import Proyectos from "@/components/Proyectos";
 import Novedades from "@/components/Novedades";
-import Map from "@/components/Map";
+import Map from "@/components/InteractiveMap";
 import Contacto from "@/components/Contacto";
 import Whatsapp from "@/components/WhatsApp";
 

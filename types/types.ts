@@ -31,6 +31,8 @@ export interface Project {
   solarium?: string;
   garage?: string;
   security?: string;
+  cafe?: string;
+  locks?: string;
   kitchen?: string;
   heating?: string;
   file?: string;

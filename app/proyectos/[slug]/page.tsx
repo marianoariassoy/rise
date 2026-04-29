@@ -3,7 +3,7 @@ import { Pin, WhatsApp, Forward } from "@/lib/icons";
 import AvanceObra from "@/components/AvanceObra";
 import Amenities from "@/components/Amenities";
 import Gallery from "@/components/Gallery";
-import Map from "@/components/Map";
+import Map from "@/components/InteractiveMap";
 
 export async function generateMetadata({
   params,

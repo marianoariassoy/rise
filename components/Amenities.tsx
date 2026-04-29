@@ -1,4 +1,4 @@
-import { Pool, Sun, Fire, Hot, Car, Security } from "@/lib/icons";
+import { Pool, Sun, Fire, Hot, Car, Security, Cafe, Locks } from "@/lib/icons";
 import { Project } from "@/types/types";
 
 const AmenitiesItem = ({
@@ -20,7 +20,7 @@ const AmenitiesItem = ({
 
 const Amenities = ({ data }: { data: Project }) => {
   return (
-    <div className="flex items-center flex-wrap lg:flex-nowrap justify-center gap-2 mt-4 relative">
+    <div className="flex items-start flex-wrap lg:flex-nowrap justify-center gap-2 mt-4 relative">
       <hr className="absolute border-primary right-0 w-full top-6 -z-1" />
       {data.pool ? <AmenitiesItem title="Piscina" icon={<Pool />} /> : null}
       {data.solarium ? <AmenitiesItem title="Solárium" icon={<Sun />} /> : null}
@@ -31,6 +31,10 @@ const Amenities = ({ data }: { data: Project }) => {
       {data.garage ? <AmenitiesItem title="Cochera" icon={<Car />} /> : null}
       {data.security ? (
         <AmenitiesItem title="Seguridad" icon={<Security />} />
+      ) : null}
+      {data.cafe ? <AmenitiesItem title="Café" icon={<Cafe />} /> : null}
+      {data.locks ? (
+        <AmenitiesItem title="Cerraduras digitales" icon={<Locks />} />
       ) : null}
     </div>
   );
