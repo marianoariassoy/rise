@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useState } from "react";
 import { Pin } from "@/lib/icons";
 import { useInView } from "react-intersection-observer";
@@ -90,9 +91,11 @@ export default function InteractiveMap() {
       </div>
 
       {/* mapa */}
-      <img
+      <Image
         src="/assets/map.svg"
         alt="Mapa interactivo"
+        width={1400}
+        height={900}
         className="w-full h-auto rounded-xl"
       />
 
