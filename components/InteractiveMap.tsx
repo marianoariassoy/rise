@@ -53,8 +53,8 @@ const markers: Marker[] = [
     id: 6,
     x: "4.5%",
     y: "84%",
-    url: "/proyectos/italo-ii",
-    description: "Belgrano 1541",
+    url: "",
+    description: "Belgrano 1535",
   },
   {
     id: 7,
@@ -115,7 +115,7 @@ export default function InteractiveMap() {
         >
           {/* botón */}
           <Link
-            href={marker.url}
+            href={marker.url ? marker.url : "#"}
             className="w-10 h-10 rounded-full bg-secondary text-white flex items-center justify-center text-xl shadow-lg hover:scale-110  cursor-pointer transition-all z-30"
           >
             +
