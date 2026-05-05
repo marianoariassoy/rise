@@ -28,7 +28,7 @@ const Contacto = () => {
           <div>
             <h3 className="text-secondary text-xl">Teléfono</h3>
             <p className="text-2xl lg:text-4xl font-semibold">
-              +54 387 40660014
+              +54 9 3874 66-0014
             </p>
           </div>
           <div>
